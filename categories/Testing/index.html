@@ -1124,7 +1124,7 @@
 
   
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("", "");</script>
+  <script>AV.initialize("vjTQ0OJc6lWYvGleNqbQSmHQ-gzGzoHsz", "HLP2PTItwSFEB9cdPx43PODI");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);
@@ -1181,11 +1181,11 @@
             counter.fetchWhenSave(true);
             counter.increment("time");
             
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text(counter.get('time'));
-            
             counter.save(null, {
               success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
                 
               },
               error: function(counter, error) {
