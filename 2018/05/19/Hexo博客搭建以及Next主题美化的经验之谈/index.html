@@ -139,10 +139,14 @@
 <meta property="og:site_name" content="...Fururur&#39;s Blog...">
 <meta property="og:description" content="这并不是一篇博客搭建教程。内容主要包含个人对于Hexo博客搭建的心得，Next6.0主题美化的部分建议，以及摘录一些各种用于博客搭建的link。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-19T07:48:48.035Z">
+<meta property="og:image" content="furur.xyz/2018/05/19/Hexo博客搭建以及Next主题美化的经验之谈/manage.png">
+<meta property="og:image" content="furur.xyz/2018/05/19/Hexo博客搭建以及Next主题美化的经验之谈/change%20ns.png">
+<meta property="og:image" content="furur.xyz/2018/05/19/Hexo博客搭建以及Next主题美化的经验之谈/dnspod.png">
+<meta property="og:updated_time" content="2018-05-19T14:39:43.605Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客搭建以及Next主题美化的经验之谈">
 <meta name="twitter:description" content="这并不是一篇博客搭建教程。内容主要包含个人对于Hexo博客搭建的心得，Next6.0主题美化的部分建议，以及摘录一些各种用于博客搭建的link。">
+<meta name="twitter:image" content="furur.xyz/2018/05/19/Hexo博客搭建以及Next主题美化的经验之谈/manage.png">
 
 
 
@@ -416,7 +420,7 @@
                 
               
 
-              <time title="创建时间：2018-05-19 14:33:48 / 修改时间：15:48:48" itemprop="dateCreated datePublished" datetime="2018-05-19T14:33:48+08:00">2018-05-19</time>
+              <time title="创建时间：2018-05-19 14:33:48 / 修改时间：22:39:43" itemprop="dateCreated datePublished" datetime="2018-05-19T14:33:48+08:00">2018-05-19</time>
             
 
             
@@ -488,7 +492,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.8k</span>
+                <span title="本文字数">3.2k</span>
               
 
               
@@ -532,6 +536,7 @@
 <ul>
 <li>搭建一个Hexo&amp;Next的最小博客系统</li>
 <li>Next主题美化心得</li>
+<li>域名绑定</li>
 <li>关于博客图片</li>
 <li>备份维护的Tips</li>
 </ul>
@@ -570,6 +575,24 @@
 <li><strong>博客字数统计和阅读所需时间</strong><br>旧版的next主题使用的是<code>hexo-wordcount</code>插件，新版已替换成<code>hexo-symbols-count-time</code></li>
 </ul>
 <p>上述的美化配置，均可在Next官方文档和<a href="https://zhuanlan.zhihu.com/p/28128674" target="_blank" rel="noopener">hexo的next主题个性化教程:打造炫酷网站</a>中找到。</p>
+<h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><p>github page自带二级域名，同时也支持绑定个人域名。</p>
+<p>域名其实分为注册和绑定两部分。</p>
+<p>第一，需要去域名服务商哪里购买域名，国内：万网、Dnspod；国外选择余地就更大了，具体的价格可参考<a href="https://www.domcomp.com/" target="_blank" rel="noopener">www.domcomp.com</a>。博主是在namesilo里买的，价格相对比较便宜。</p>
+<p>第二，域名绑定。如果是像博主这样在国外服务商买的域名，一般就不使用其域名解析服务（NS）了，可以换成国内的Dnspod。<strong>然后设置别名即可，不需要添加A记录。</strong></p>
+<p>具体操作如下：</p>
+<ol>
+<li>更换域名服务商的NS，以namesilo为例。</li>
+</ol>
+<p><img src="manage.png" alt=""></p>
+<p><img src="change ns.png" alt=""></p>
+<ol start="2">
+<li>在Dnspod中添加域名和记录。</li>
+</ol>
+<p><img src="dnspod.png" alt=""></p>
+<ol start="3">
+<li>在博客源文件<code>source/</code>目录下创建一个无文件类型的文件<code>CNAME</code>，并添加自己的域名，例如<code>furur.xyz</code>。更新部署到github上。</li>
+</ol>
+<p>由于NS修改需要时间，过一段时间可以刷新下网页看看。</p>
 <h2 id="关于博客图片"><a href="#关于博客图片" class="headerlink" title="关于博客图片"></a>关于博客图片</h2><p>Hexo博客搭建完后，大多会选择部署到Github Pages或者Coding Pages上去，这时候由于空间问题，大家可能会对于博客中的图片放哪的问题存在困惑。网上大多数的人都推荐使用各种图床或者云服务（七牛云）。但是个人觉得如果不是嫌图片加载的速度过慢，其实直接上传图片到github就可以了。Github Pages每人的空间有100M，毕竟技术博客中包含的图片有限，实在有大图，可以先进行在线压缩。一般一篇博客1M都不到，待有恒心写满100篇博客在说吧。上传图片，需要将Hexo配置文件中的<code>post_asset_folder</code>设为true，然后在博客创建时，会在source文件夹下创建于博客同名的文件夹。在里面放图片，博客中直接引用文件名即可。</p>
 <h2 id="备份维护的Tips"><a href="#备份维护的Tips" class="headerlink" title="备份维护的Tips"></a>备份维护的Tips</h2><p>Hexo博客需要本地静态部署后，push到服务器上去。善于思考的，应该会想到如果换电脑了，应该如何继续写博客部署到服务器上去呢？具体可参考<a href="https://www.zhihu.com/question/21193762" target="_blank" rel="noopener">使用hexo，如果换了电脑怎么更新博客？</a></p>
 <p>其实原理很简单，知乎中提到的这么多方法，无非就是将除了部署生成的文件之外，其余的文件夹以及配置文件都单独保存好即可。保存的方法自然有很多，可以新建一个源代码分支，也可单独用云服务进行备份。</p>
@@ -612,7 +635,7 @@
   <p><span>本文标题:</span><a href="/2018/05/19/Hexo博客搭建以及Next主题美化的经验之谈/">Hexo博客搭建以及Next主题美化的经验之谈</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Fururur 的个人博客">Fururur</a></p>
   <p><span>发布时间:</span>2018年05月19日 - 14:05</p>
-  <p><span>最后更新:</span>2018年05月19日 - 15:05</p>
+  <p><span>最后更新:</span>2018年05月19日 - 22:05</p>
   <p><span>原始链接:</span><a href="/2018/05/19/Hexo博客搭建以及Next主题美化的经验之谈/" title="Hexo博客搭建以及Next主题美化的经验之谈">furur.xyz/2018/05/19/Hexo博客搭建以及Next主题美化的经验之谈/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="furur.xyz/2018/05/19/Hexo博客搭建以及Next主题美化的经验之谈/"  aria-label="复制成功！"></i></span>
   </p>
@@ -862,7 +885,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建一个Hexo-amp-Next的最小博客系统"><span class="nav-number">1.</span> <span class="nav-text">搭建一个Hexo&amp;Next的最小博客系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Next主题美化心得"><span class="nav-number">2.</span> <span class="nav-text">Next主题美化心得</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于博客图片"><span class="nav-number">3.</span> <span class="nav-text">关于博客图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备份维护的Tips"><span class="nav-number">4.</span> <span class="nav-text">备份维护的Tips</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录"><span class="nav-number">6.</span> <span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#教程列表"><span class="nav-number">6.1.</span> <span class="nav-text">教程列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备份维护"><span class="nav-number">6.2.</span> <span class="nav-text">备份维护</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题美化"><span class="nav-number">6.3.</span> <span class="nav-text">主题美化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件"><span class="nav-number">6.4.</span> <span class="nav-text">插件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建一个Hexo-amp-Next的最小博客系统"><span class="nav-number">1.</span> <span class="nav-text">搭建一个Hexo&amp;Next的最小博客系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Next主题美化心得"><span class="nav-number">2.</span> <span class="nav-text">Next主题美化心得</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域名绑定"><span class="nav-number">3.</span> <span class="nav-text">域名绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于博客图片"><span class="nav-number">4.</span> <span class="nav-text">关于博客图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备份维护的Tips"><span class="nav-number">5.</span> <span class="nav-text">备份维护的Tips</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录"><span class="nav-number">7.</span> <span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#教程列表"><span class="nav-number">7.1.</span> <span class="nav-text">教程列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备份维护"><span class="nav-number">7.2.</span> <span class="nav-text">备份维护</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题美化"><span class="nav-number">7.3.</span> <span class="nav-text">主题美化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件"><span class="nav-number">7.4.</span> <span class="nav-text">插件</span></a></li></ol></li></ol></div>
             
 
           </div>
