@@ -1888,7 +1888,7 @@ pre .javascript .function {
   font-family: UKIJ Ekran;
 }
 .my_post_copyright {
-  width: 85%;
+  width: 100%;
   max-width: 45em;
   margin: 2.8em auto 0;
   padding: 0.5em 1em;
@@ -2106,7 +2106,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #acffa7;
+  background: #c4f901;
 }
 .links-of-blogroll {
   font-size: 13px;
