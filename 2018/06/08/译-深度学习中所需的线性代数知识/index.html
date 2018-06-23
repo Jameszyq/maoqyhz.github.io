@@ -136,7 +136,7 @@
 
 
   <meta name="description" content="原文地址：Linear Algebra for Deep Learning 原文作者：Vihar Kurama 译文出自：掘金翻译计划">
-<meta name="keywords" content="Deep Learning,AI,掘金翻译计划">
+<meta name="keywords" content="掘金翻译计划,Deep Learning,AI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[译]深度学习中所需的线性代数知识">
 <meta property="og:url" content="furur.xyz/2018/06/08/译-深度学习中所需的线性代数知识/index.html">
@@ -286,6 +286,14 @@
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-translation">
+    <a href="/translation/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-globe"></i> <br />翻译计划</a>
   </li>
         
         
@@ -683,11 +691,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/掘金翻译计划/" <i class="fa fa-tag"></i> 掘金翻译计划</a>
+          
             <a href="/tags/Deep-Learning/" <i class="fa fa-tag"></i> Deep Learning</a>
           
             <a href="/tags/AI/" <i class="fa fa-tag"></i> AI</a>
-          
-            <a href="/tags/掘金翻译计划/" <i class="fa fa-tag"></i> 掘金翻译计划</a>
           
         </div>
       
@@ -808,7 +816,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -820,10 +828,6 @@
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
                     
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -866,7 +870,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -944,7 +954,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么是数学？"><span class="nav-number">1.</span> <span class="nav-text">为什么是数学？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标量"><span class="nav-number">2.</span> <span class="nav-text">标量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向量"><span class="nav-number">3.</span> <span class="nav-text">向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵"><span class="nav-number">4.</span> <span class="nav-text">矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵加法"><span class="nav-number">4.1.</span> <span class="nav-text">矩阵加法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵与矩阵相加"><span class="nav-number">4.2.</span> <span class="nav-text">矩阵与矩阵相加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵与标量相加"><span class="nav-number">4.3.</span> <span class="nav-text">矩阵与标量相加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵与标量的乘法"><span class="nav-number">4.4.</span> <span class="nav-text">矩阵与标量的乘法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵乘法"><span class="nav-number">4.5.</span> <span class="nav-text">矩阵乘法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵转置"><span class="nav-number">4.6.</span> <span class="nav-text">矩阵转置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#张量"><span class="nav-number">5.</span> <span class="nav-text">张量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-number">6.</span> <span class="nav-text">结束语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么是数学？"><span class="nav-text">为什么是数学？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标量"><span class="nav-text">标量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向量"><span class="nav-text">向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵"><span class="nav-text">矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵加法"><span class="nav-text">矩阵加法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵与矩阵相加"><span class="nav-text">矩阵与矩阵相加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵与标量相加"><span class="nav-text">矩阵与标量相加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵与标量的乘法"><span class="nav-text">矩阵与标量的乘法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵乘法"><span class="nav-text">矩阵乘法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵转置"><span class="nav-text">矩阵转置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#张量"><span class="nav-text">张量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束语"><span class="nav-text">结束语</span></a></li></ol></div>
             
 
           </div>
